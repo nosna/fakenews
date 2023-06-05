@@ -17,7 +17,7 @@ def load_captions(cap_json):
     return captions, imgIDs
 
 def main():
-    captions, imgIDs = load_captions('/nlp/data/vision_datasets/coco/annotations/captions_train2014.json')
+    captions, imgIDs = load_captions('/nlp/data/vision_datasets/coco/annotations/captions_val2014.json')
 
     # Load Stable Diffusion Model and generate images
     pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1-base", torch_dtype=torch.float16)
